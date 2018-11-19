@@ -35,6 +35,7 @@ class App extends Component {
         <div>
           <h2>Sesión Iniciada</h2>
           <h3>{this.state.user.displayName}</h3>
+          <h3>{this.state.user.email}</h3>
           <button onClick={() => this.handleLogOut()}>Cerrar Sesión</button>
         </div>
       )
