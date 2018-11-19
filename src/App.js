@@ -42,14 +42,21 @@ class App extends Component {
       return (
         <div>
           <h2>Inicia Sesión</h2>
-          <button className="button g">Google</button><br></br>
+          <button onClick={this.LoginWithGoogle} className="button g">Google</button><br></br>
           <button onClick={() => this.LoginWithFacebook()} className="button f">Facebook</button><br></br>
           <button onClick={() => this.LoginWithGitHub()} className="button t">GitHub</button><br></br>
         </div>
       )
     }
   }
-  
+
+  LoginWithGoogle(){
+    const provider = new firebase.auth.GoogleAuthProvider();
+
+    firebase.auth().signInWithPopup(provider);
+
+  }
+
   LoginWithGitHub(){
     var provider = new firebase.auth.GithubAuthProvider();
     firebase.auth().signInWithPopup(provider).then(function(result) {
