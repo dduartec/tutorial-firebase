@@ -30,3 +30,20 @@
     transform: rotate(360deg);
   }
 }
+
+.button{
+  margin:10px;
+  width: 100px;
+  height: 30px;
+}
+.g{
+  background-color: white;
+}
+.f{
+  background-color: 	#3b5998;
+  color: white;
+}
+.t{
+  background-color: 	 #00aced;
+  color: white;
+}
